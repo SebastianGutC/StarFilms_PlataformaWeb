@@ -1,0 +1,187 @@
+<!DOCTYPE html>
+<html lang="es" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Membresía Star</title>
+
+    <link th:href="@{/img/logos/StarFilms.iconored.png}" rel="icon" type="image/x-icon">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@100..900&display=swap" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons/font/bootstrap-icons.css" rel="stylesheet">
+    <link th:href="@{/css/membresia.css}" rel="stylesheet">
+</head>
+<body>
+
+<div class="headAll">
+    <header>
+        <div class="container">
+            <div class="bars">
+                <div class="line"></div>
+                <div class="line"></div>
+                <div class="line"></div>
+            </div>
+            <a th:href="@{/signup}">
+                <button class="btn-signup">Crear Cuenta</button>
+            </a>
+            <div class="empresa">
+                <a th:href="@{/}">
+                    <img th:src="@{/img/logos/logo.blanco.png}" alt="Logo" class="logo">
+                </a>
+            </div>
+            <a th:href="@{/login}">
+                <button class="btn-login">Iniciar Sesión</button>
+            </a>
+        </div>
+    </header>
+</div>
+<nav>
+    <ul class="menu">
+        <li><a th:href="@{/}">Cartelera</a></li>
+        <li><a th:href="@{/boleteria}">Boletería</a></li>
+        <li><a th:href="@{/membresias}">Membresías</a></li>
+    </ul>
+</nav>
+        
+    <div id="carouselExampleIndicators" class="carousel slide">
+        <div class="carousel-indicators">
+          <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+          <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="1" aria-label="Slide 2"></button>
+        </div>
+        <div class="carousel-inner">
+          <div class="carousel-item active">
+            <img th:src="@{img/pbl/pblmiembros.png}" class="d-block w-100" alt="...">
+          </div>
+          <div class="carousel-item">
+            <img th:src="@{img/pbl/pbl1.png}" class="d-block w-100" alt="...">
+          </div>
+          
+        </div>
+        <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="prev">
+          <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+          <span class="visually-hidden">Previous</span>
+        </button>
+        <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="next">
+          <span class="carousel-control-next-icon" aria-hidden="true"></span>
+          <span class="visually-hidden">Next</span>
+        </button>
+      </div>
+
+      <section class="stellar-section">
+        <div class="stellar-header">
+            <div class="stellar-logo">
+                <img th:src="@{img/logos/StarFilms logo (1).png}" alt="Stellar Logo">
+            </div>
+            <div class="stellar-info">
+              <h3>Por tan solo $30.000 / anualmente</h3>
+                <div class="benefit-item">
+                  <i class="bi bi-bookmark-star"></i>
+                  <p>Accede a Precios especiales en tickets </p>
+                </div>
+              <div class="benefit-item">
+                  <i class="bi bi-bookmark-star"></i>
+                  <p> Obtén descuentos en la Confitería regular</p>
+              </div>
+              <div class="benefit-item">
+                  <i class="bi bi-bookmark-star"></i>
+                  <p> Accede a planes exclusivos con nuestras Marcas Aliadas</p>
+              </div>
+              <div class="benefit-item">
+                  <i class="bi bi-bookmark-star"></i>
+                  <p> Obtén beneficios de Miembro en los Estrenos mas esperados</p>
+              </div>
+            </div>
+        </div>
+        <div class="stellar-cta">
+            <button>Convertirme en Miembro Stellar</button>
+        </div>
+
+        
+        <div class="stellar-benefits">
+          <h3>¿Por qué ser un Miembro Exclusivo?</h3>
+          <div class="benefit">
+              <div class="circle">
+                  <img th:src="@{img/pbl/miembro1.jpg}" alt="Imagen Circular">
+              </div>
+              <p>Ser parte de StarFilms tiene ventajas únicas que no encontrarás en ningún otro lugar. 
+                Nuestros miembros disfrutan de beneficios especiales en los estrenos más esperados del año, 
+                con acceso prioritario, asientos preferenciales, ¡y mucho más! Vive la emoción de cada estreno como un VIP, 
+                con sorpresas y experiencias exclusivas que harán de cada función un recuerdo inolvidable.
+                 ¡No te pierdas lo mejor del cine, vive la experiencia StarFilms!</p>
+          </div>
+          <div class="benefit">
+              <div class="circle">
+                  <img th:src="@{img/pbl/miembro2.jpg}" alt="Imagen Circular">
+              </div>
+              <p>¡Tu experiencia en StarFilms NO termina en la pantalla grande! 
+                Al ser parte de nuestra familia, puedes disfrutar de planes exclusivos 
+                con nuestras Marcas Aliadas, que harán de cada visita al cine una experiencia 
+                completa. Desde descuentos en tus snacks favoritos hasta promociones especiales, queremos que cada momento sea único. Adquiere tu membresía para vivir cómo el cine se convierte en una aventura de principio a fin.</p>
+          </div>
+      </div>
+      
+
+      
+        <div class="stellar-steps">
+            <h3>Sigue estos pasos y sé parte de la Experiencia Stellar</h3>
+            <div class="steps">
+                <div class="step">
+                    <div class="step-number">1</div>
+                    <p>Da Click sobre el botón de "Convertirme en Miembro Stellar" y sigue las instrucciones.</p>
+                </div>
+                <div class="step">
+                    <div class="step-number">2</div>
+                    <p>Vincula tu correo y procesa tu información para la facturación</p>
+                </div>
+                <div class="step">
+                    <div class="step-number">3</div>
+                    <p>Ingresa a tu cuenta como Miembro Stellar y comienza a aprovechar tus beneficios!!</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+<footer>
+    <div class="footer-content">
+        <div class="footer-logo">
+            <img th:src="@{/img/logos/SFicono.png}" alt="Logo">
+        </div>
+        <div class="footer-address">
+            <p>Av. Carrera 15 con Calle 19 Sur,<br>
+                Centro Comercial Unicentro - Neiva, Huila</p>
+        </div>
+        <div class="footer-contact">
+            <p>Contáctanos:</p>
+            <ul class="list-inline">
+                <li class="list-inline-item">
+                    <a href="#" class="footer-icon">
+                        <i class="bi bi-telephone"></i>
+                    </a>
+                </li>
+                <li class="list-inline-item">
+                    <a th:href="@{https://web.facebook.com/UnicentroNeiva?locale=es_LA}" class="footer-icon">
+                        <i class="bi bi-facebook"></i>
+                    </a>
+                </li>
+                <li class="list-inline-item">
+                    <a th:href="@{https://www.instagram.com/unicentroneivaoficial/}" class="footer-icon">
+                        <i class="bi bi-instagram"></i>
+                    </a>
+                </li>
+                <li class="list-inline-item">
+                    <a th:href="@{https://www.youtube.com/@unicentroneiva454}" class="footer-icon">
+                        <i class="bi bi-youtube"></i>
+                    </a>
+                </li>
+            </ul>
+        </div>
+    </div>
+</footer>
+
+
+<script th:src="@{/js/script.js}"></script>
+</body>
+</html>

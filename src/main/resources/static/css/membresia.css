@@ -1,0 +1,549 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    font-family: "Outfit", sans-serif;
+    overflow-x: hidden;
+}
+
+a{
+    text-decoration: none;
+}
+
+img{
+    max-width: 100%;
+}
+
+header {
+    position: relative;
+    background-color: #cd0404;
+    padding: 8px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.container {
+    position: relative;
+    width: 100%;
+    max-width: 1200px;
+    display: flex;
+    justify-content:center;
+    align-items: center;
+}
+
+.empresa{
+    padding:0px 100px;
+}
+
+.logo {
+    width: 200px;
+
+}
+
+button:hover {
+    background-color: #000000;
+    color: #ff0000;
+}
+
+
+.btn-signup {
+    margin: 0 200px;
+    padding: 5px 10px;
+    border: 2px solid  #000000;
+    color: white;
+    background-color: #000000;
+    cursor: pointer;
+    border-radius: 25px;
+    font-size: 17px;
+    font-weight: bold;
+    margin-right: auto;
+    box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.3);
+}
+
+.btn-login {
+    margin: 0 200px;
+    padding: 5px 10px;
+    border: 2px solid  #000000;
+    color: white;
+    background-color: #e10303;
+    cursor: pointer;
+    border-radius: 25px;
+    font-size: 17px;
+    font-weight: bold;
+    margin-left: auto;
+    box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.3);
+}
+
+nav {
+    background-color: #000000;
+    padding: 10px 0;
+    position: static;
+}
+
+ul {
+    list-style-type: none;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+li {
+    margin: 0 20px;
+    position: relative;
+}
+
+li:not(:last-child)::after {
+    content: '|';
+    position: absolute;
+    right: -15px;
+    color: white;
+}
+
+a {
+    text-decoration: none;
+    color: white;
+    font-weight: bold;
+    font-size: 16px;
+}
+
+a:hover {
+    color: #ff0000;
+}
+
+.stellar-section {
+    display: grid;
+    place-items: center; 
+    width: 100%;
+    padding: 20px;
+    background-color: #f9f9f9;
+}
+
+.stellar-header {
+    display: inline-block;
+    align-items: center;
+    display: flex;
+    background-color: #CCBF3A;
+    padding: 20px;
+    border-radius: 8px;
+    width: 78%;
+}
+
+.stellar-logo {
+    display: flex;
+    align-items: center;
+    flex: 1;
+}
+
+.stellar-logo img{
+    width: 250px;
+}
+
+.stellar-logo h2 {
+    margin-left: 10px;
+    color: #ffffff;
+}
+
+.stellar-info {
+    flex: 2;
+    color: #ffffff;
+    text-shadow: 2px 2px 4px rgba(12, 12, 12, 0.7);
+}
+
+.stellar-info h3 {
+    text-align: center;
+    font-size: 30px;
+    margin: 0;
+    text-transform: uppercase;
+    color: #ffffff;
+    font-weight: bold;
+    text-shadow: 2px 2px 4px rgba(59, 56, 10, 0.7); 
+}
+
+.benefit-item {
+    display: flex;
+    align-items: center; 
+    margin-bottom: 10px; 
+    font-weight: bold;
+}
+
+.benefit-item i {
+    font-size: 30px; 
+    color: #ffffff; 
+    margin-right: 10px; 
+}
+
+.benefit-item p {
+    font-size: 15px;
+    text-transform: uppercase;
+    margin: 0; 
+}
+.stellar-cta {  
+    margin: 30px 0;
+    text-align: center;
+}
+
+.stellar-cta button {
+    padding: 5px 10px;
+    border: 2px solid  #000000;
+    color: rgb(0, 0, 0);
+    background-color: #CCBF3A;
+    cursor: pointer;
+    border-radius: 25px;
+    font-size: 17px;
+    font-weight: bold;
+    margin-left: auto;
+    box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.3);
+}
+
+.stellar-cta button:hover {
+    background-color: #000000;
+    color: #CCBF3A;
+}
+
+.stellar-benefits {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin-top: 10px;
+}
+
+.stellar-benefits h3 {
+    font-weight: bold;
+    text-align: center;
+    color: #000000;
+    margin-bottom: 25px;
+}
+
+.benefit p {
+    width: 65%;
+    font-size:17px;
+    padding-top: 15px;
+    text-align: justify
+}
+
+.benefit {
+    flex-direction: column;
+    display: flex;
+    align-items: center;
+    margin: 15px 0;
+}
+
+.circle {
+    width: 200px;
+    height: 200px;
+    border-radius: 50%;
+    overflow: hidden;
+    border: 7px solid #CCBF3A;
+}
+
+.circle img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.stellar-steps {
+    width: 100%;
+    margin-top: 30px;
+    background-color: #CCBF3A;
+    padding: 20px;
+    border-radius: 8px;
+    text-align: center;
+}
+
+.stellar-steps h3 {
+    text-transform: uppercase;
+    font-weight: bold;
+    color: #000000;
+    margin-bottom: 18px;
+}
+
+.steps {
+    display: flex;
+    justify-content: space-around;
+}
+
+.step {
+    font-weight: bold;
+    width: 200px;
+    text-align: center;
+    color: #000000;
+}
+
+.step-number {
+    font-size: 24px;
+    font-weight: bold;
+    background-color: #000000;
+    color: #fff;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0 auto 10px;
+}
+
+
+
+footer {
+    background-color: black;
+    color: white;
+    padding: 20px;
+    text-align: center;
+}
+
+.footer-content {
+    font-size: 20px;
+    padding-right: 30px;
+    padding-top: 5px;
+    font-weight: bold;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+
+.footer-logo img {
+    padding-left: 50px;
+    width: 150px;
+}
+
+.footer-address {
+    padding-right: 100px;
+    font-size: 17px;
+}
+
+.list-inline{
+    padding-top: 3px;
+}
+
+
+.footer-icon i {
+    padding-top: 4px;
+    font-size: 25px;
+    color: white;
+    transition: color 0.4s;
+}
+
+.footer-icon:hover i {
+    color: #ff0000;
+}
+
+/* Responsive adjustments for smaller devices */
+
+@media(max-width:767px){
+
+    .stellar-header {
+        flex-direction: column;
+        align-items: center; 
+        width: 95%; 
+    }
+
+    .stellar-logo img {
+        width: 150px; 
+    }
+
+    .stellar-info h3 {
+        text-align: center;
+        font-size: 16px; 
+    }
+
+    .stellar-info p{
+        font-size: 12px;
+    }
+
+    .benefit p {
+        width: 90%; 
+        font-size: 15px; 
+    }
+
+    .steps {
+        flex-direction: column; 
+        align-items: center; 
+    }
+
+    .step {
+        width: 90%;
+        margin: 10px 0; 
+    }
+
+    .empresa{
+        padding: 0px 10px;
+    }
+    .logo {
+        width: 130px; 
+    }
+
+    .btn-login, .btn-signup {
+        margin: 0 5px;
+        padding: 3px 5px;
+        font-size: 9px;
+    }
+
+    .bars {
+        padding-right: 10px;
+        display: block;
+        cursor: pointer;
+    }
+    
+    .bars .line {
+        width: 18px;
+        height: 2px;
+        background-color: white;
+        margin: 3px 2px;
+    }
+
+    .menu {
+        max-height: 0; 
+        overflow: hidden; 
+        transition: max-height 0.5s ease;
+        background-color: #000000;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .menu.active {
+        max-height: 240px;
+        padding: 5px 0; 
+    }
+
+    .menu li {
+        margin: 5px 0;
+        text-align: center;
+        width: 100%;
+    }
+
+    .menu a {
+        font-size: 15px; 
+        color: white;
+        padding: 10px;
+        display: block;
+        width: 100%;
+    }
+
+    .menu a:hover {
+        color: #ff0000;
+        background-color: #333333;
+    }
+
+    .footer-content {
+        font-size: 5px;
+        padding: 0px 2px;
+        font-weight: bold;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+    
+    
+    .footer-logo img {
+        padding-left: 3px;
+        padding-right: 15px;
+        width: 90px;
+    }
+    
+    .footer-address {
+        padding-right: 3px;
+        padding-left: 3px;
+        font-size: 9px;
+    }
+   
+    .footer-contact p{
+        padding-right: 5px;
+        padding-top: 0.5px;
+        font-size: 11px;
+    }
+    .footer-icon i {
+        padding: 0px 0.5px;
+        font-size: 16px;
+        color: white;
+        transition: color 0.4s;
+    }
+}
+
+@media(min-width: 768px) and (max-width: 1024px){
+    
+    .container{
+        padding-right: 70px;
+    }
+    .empresa{
+        padding: 6px 30px;
+    }
+    .logo {
+        width: 230px; 
+    }
+
+    .btn-login, .btn-signup {
+        margin: 0 5px;
+        padding: 3px 5px;
+        font-size: 16px;
+    }
+
+    .bars {
+        padding-right: 20px;
+        padding-left: 2px;
+        display: block;
+        cursor: pointer;
+    }
+    
+    .bars .line {
+        width: 38px;
+        height: 5px;
+        background-color: white;
+        margin: 6px 2px;
+    }
+    
+    .menu {
+        max-height: 0;  
+        overflow: hidden; 
+        transition: max-height 0.5s ease; 
+        background-color: #000000;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .menu.active {
+        max-height: 400px; 
+        padding: 5px 2px;   
+    }
+
+    .menu li {
+        margin: 15px 0;
+        text-align: center;
+        width: 100%;
+    }
+
+    .menu a {
+        font-size: 25px;  
+        color: white;
+        padding: 10px;
+        display: block;
+        width: 100%;
+    }
+
+    .menu a:hover {
+        color: #ff0000;
+        background-color: #333333;
+    }
+
+    .footer-logo img {
+        padding-left: 10px;
+        padding-right: 5px;
+        width: 82px;
+    }
+    
+    .footer-address {
+        padding-right: 3px;
+        padding-left: 3px;
+        font-size: 15px;
+    }
+   
+}

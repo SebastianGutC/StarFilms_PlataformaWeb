@@ -1,0 +1,284 @@
+
+* {
+    margin: 0;
+    padding: 0;
+}
+
+body{
+    font-family: "Outfit", sans-serif;
+    overflow-x: hidden;
+}
+
+
+.card {
+    border: 2px solid #000000;
+    border-radius: 10px;
+    overflow: hidden;
+    width: 90%;
+    max-width: 950px;
+    height: auto;
+    margin: 20px auto;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.card-content {
+    display: flex;
+    padding: 15px;
+    flex-wrap: wrap;
+}
+
+.image-container {
+    padding-top: 5px;
+    flex: 1;
+    min-width: 250px;
+    max-width: 500px;
+    margin-right: 15px;
+}
+
+.image-container img {
+    width: 100%;
+    height: auto;
+    border-radius: 5px;
+}
+
+.details {
+    flex: 2;
+    min-width: 280px;
+}
+
+.details h3,
+.details h4 {
+    margin: 5px 0;
+    font-size: 20px;
+    font-weight: bold;
+}
+
+.details input, .details textarea {
+    margin: 4px;
+    padding: 3px 4px;
+    width: 100%;
+    max-width: 600px;
+    height: auto;
+    color: #434343;
+    font-size: 18px;
+}
+
+.card-footer {
+    width: 100%;
+    height: auto;
+    min-height: 80px;
+    display: flex;
+    flex-wrap: wrap;
+    background-color: #ff000b;
+    color: white;
+    text-align: center;
+    padding: 10px 0;
+}
+
+.info-item {
+    flex: 1;
+    min-width: 200px;
+    align-items: center;
+    padding: 5px;
+}
+
+.info-item input {
+    font-size: 16px;
+    margin: 5px auto;
+    color: #ffffff;
+    text-align: center;
+    width: auto;
+    max-width: 200px;
+    height: auto;
+    background-color: #ff000b;
+    border: none;
+    padding: 5px 10px;
+}
+
+.info-item h4 {
+    margin: 0;
+    font-size: 18px;
+    font-weight: bold;
+}
+
+
+.info-item input, .info-item select{
+    font-size: 16px;
+    margin-top: 5px;
+    color: #ffffff;
+    text-align: center;
+    justify-content: center;
+    width: 200px;
+    height: 34px;
+    background-color: #ff000b;
+    border-radius: 20px;
+    border: 1.5px solid #980006;
+}
+
+
+.info-item h4 {
+    margin: 0;
+    font-size: 14px;
+    font-weight: bold;
+}
+
+.info-item p {
+    margin: 5px 0 0;
+    font-size: 12px;
+}
+
+
+.buttons {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding-top: 5px;
+    padding-bottom: 40px;
+}
+
+.option {
+    margin-top: 10px;
+    display: flex;
+    gap: 40px;
+}
+
+.btn:hover {
+    background-color: #000000;
+    border: 2px solid  #000000;
+    color: #ff0000;
+}
+
+.btn{
+    margin: 0px 80px;
+    padding: 5px 10px;
+    border: 2px solid  #000000;
+    color: white;
+    background-color: #bdbdbd;
+    cursor: pointer;
+    border-radius: 25px;
+    font-size: 17px;
+    font-weight: bold;
+    margin-left: auto;
+    box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.3);
+}
+
+.alert {
+    margin-top: 20px;
+    margin-bottom: 20px;
+    padding: 15px;
+    border-radius: 4px;
+    animation: fadeIn 0.5s;
+}
+
+.alert-success {
+    background-color: #d4edda;
+    border-color: #c3e6cb;
+    color: #155724;
+}
+
+.alert-danger {
+    background-color: #f8d7da;
+    border-color: #f5c6cb;
+    color: #721c24;
+}
+
+@keyframes fadeIn {
+    from { opacity: 0; }
+    to { opacity: 1; }
+}
+
+.alert button.btn-close {
+    padding: 0.5rem;
+    margin: -0.5rem -0.5rem -0.5rem auto;
+}
+
+/* Responsive adjustments for smaller devices */
+
+@media(max-width:767px){
+
+    .card {
+        width: 95%;
+        margin: 10px auto;
+    }
+
+    .card-content {
+        flex-direction: column; /
+    }
+
+    .image-container {
+        margin-right: 0;
+        margin-bottom: 15px;
+        max-width: 100%;
+    }
+
+    .details {
+        width: 100%;
+    }
+
+    .details h3,
+    .details h4 {
+        font-size: 16px;
+        text-align: center;
+    }
+
+    .details input, .details textarea {
+        width: 320px;
+        font-size: 14px;
+        text-align: justify;
+        padding: 5px 10px;
+    }
+
+    .card-footer {
+        flex-direction: column;
+        padding: 5px 0;
+    }
+
+    .info-item {
+        justify-content: center;
+        align-items: center;
+        width: 370px;
+        padding: 5px 0;
+    }
+
+    .info-item h4 {
+        font-size: 14px;
+    }
+
+    .info-item input, .info-item select {
+        font-size: 12px;
+        margin: 2px auto;
+        padding: 3px 5px;
+    }
+
+}
+
+
+@media(min-width: 768px) and (max-width: 1024px){
+
+    .card {
+        width: 95%;
+    }
+
+    .details h3,
+    .details h4 {
+        font-size: 18px;
+    }
+
+    .details input , .details textarea{
+        font-size: 16px;
+    }
+
+    .info-item h4 {
+        font-size: 16px;
+    }
+
+    .info-item{
+        width: 10px;
+    }
+
+    .info-item input {
+        font-size: 14px;
+    }
+
+
+}

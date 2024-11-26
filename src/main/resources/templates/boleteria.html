@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="es" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Boletería</title>
+
+    <link th:href="@{/img/logos/StarFilms.iconored.png}" rel="icon" type="image/x-icon">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@100..900&display=swap" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons/font/bootstrap-icons.css" rel="stylesheet">
+    <link th:href="@{/css/boleteria.css}" rel="stylesheet">
+</head>
+
+<body>
+
+<div class="headAll">
+    <header>
+        <div class="container">
+            <div class="bars">
+                <div class="line"></div>
+                <div class="line"></div>
+                <div class="line"></div>
+            </div>
+            <a th:href="@{/signup}">
+                <button class="btn-signup">Crear Cuenta</button>
+            </a>
+            <div class="empresa">
+                <a th:href="@{/}">
+                    <img th:src="@{/img/logos/logo.blanco.png}" alt="Logo" class="logo">
+                </a>
+            </div>
+            <a th:href="@{/login}">
+                <button class="btn-login">Iniciar Sesión</button>
+            </a>
+        </div>
+    </header>
+</div>
+
+<nav>
+    <ul class="menu">
+        <li><a th:href="@{/}">Cartelera</a></li>
+        <li><a th:href="@{/boleteria}">Boletería</a></li>
+        <li><a th:href="@{/membresias}">Membresías</a></li>
+    </ul>
+</nav>
+
+    <div class="precio">
+        <h1>Boletería</h1>
+
+        <!-- Miembro Regular -->
+        <div class="section-title">
+            <h2>Precios para Miembro Regular</h2>
+        </div>
+        <div class="pricing-table">
+            <table class="table table-bordered">
+                <thead>
+                    <tr>
+                        <th>Día</th>
+                        <th>2D</th>
+                        <th>3D</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>Lunes - Jueves</td>
+                        <td>$10.000</td>
+                        <td>$15.000</td>
+                    </tr>
+                    <tr>
+                        <td>Viernes - Domingo</td>
+                        <td>$12.000</td>
+                        <td>$17.000</td>
+                    </tr>
+                    <tr>
+                        <td>Festivos</td>
+                        <td>$14.000</td>
+                        <td>$18.000</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+
+        <div class="section-title">
+            <h2>Precios para Miembro Stellar</h2>
+        </div>
+        <div class="pricing-table">
+            <table class="table table-bordered">
+                <thead>
+                    <tr>
+                        <th>Día</th>
+                        <th>2D</th>
+                        <th>3D</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>Lunes - Jueves</td>
+                        <td>$8.000</td>
+                        <td>$12.000</td>
+                    </tr>
+                    <tr>
+                        <td>Viernes - Domingo</td>
+                        <td>$10.000</td>
+                        <td>$13.000</td>
+                    </tr>
+                    <tr>
+                        <td>Festivos</td>
+                        <td>$12.000</td>
+                        <td>$15.000</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+
+        <div class="footer">
+            <p>© 2024 StarFilms | Todos los derechos reservados.</p>
+        </div>
+    </div>
+
+<footer>
+    <div class="footer-content">
+        <div class="footer-logo">
+            <img th:src="@{/img/logos/SFicono.png}" alt="Logo">
+        </div>
+        <div class="footer-address">
+            <p>Av. Carrera 15 con Calle 19 Sur,<br>
+                Centro Comercial Unicentro - Neiva, Huila</p>
+        </div>
+        <div class="footer-contact">
+            <p>Contáctanos:</p>
+            <ul class="list-inline">
+                <li class="list-inline-item">
+                    <a href="#" class="footer-icon">
+                        <i class="bi bi-telephone"></i>
+                    </a>
+                </li>
+                <li class="list-inline-item">
+                    <a th:href="@{https://web.facebook.com/UnicentroNeiva?locale=es_LA}" class="footer-icon">
+                        <i class="bi bi-facebook"></i>
+                    </a>
+                </li>
+                <li class="list-inline-item">
+                    <a th:href="@{https://www.instagram.com/unicentroneivaoficial/}" class="footer-icon">
+                        <i class="bi bi-instagram"></i>
+                    </a>
+                </li>
+                <li class="list-inline-item">
+                    <a th:href="@{https://www.youtube.com/@unicentroneiva454}" class="footer-icon">
+                        <i class="bi bi-youtube"></i>
+                    </a>
+                </li>
+            </ul>
+        </div>
+    </div>
+</footer>
+
+
+<script th:src="@{/js/script.js}"></script>
+
+</body>
+</html>

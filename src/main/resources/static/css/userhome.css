@@ -1,0 +1,333 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    font-family: "Outfit", sans-serif;
+    overflow-x: hidden;
+}
+
+a{
+    text-decoration: none;
+}
+
+img{
+    max-width: 100%;
+}
+
+
+header {
+    position: relative;
+    background-color: #cd0404;
+    padding: 8px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.container {
+    position: static;
+    width: 100%;
+    max-width: 1200px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.container h5{
+    font-size: 18px;
+    color: #ffffff;
+    text-shadow: 2px 2px 4px rgba(12, 12, 12, 0.7);
+}
+
+.empresa{
+    margin-right: 140px;
+    padding:0px 100px;
+}
+
+.logo {
+    width: 200px;
+
+}
+
+button:hover {
+    background-color: #000000;
+    color: #ff0000;
+}
+
+.btn-logout {
+    margin: 0px 80px;
+    padding: 5px 10px;
+    border: 2px solid  #000000;
+    color: white;
+    background-color: #e10303;
+    cursor: pointer;
+    border-radius: 25px;
+    font-size: 17px;
+    font-weight: bold;
+    margin-left: auto;
+    box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.3);
+}
+
+.main-content {
+    flex: 1;
+    padding: 40px;
+    background-color: #e1e1e1;
+    height: auto;
+}
+
+h1 {
+    color: #000000;
+}
+
+.user-panel {
+    display: block;
+    height: auto;
+    background-color: white;
+    padding: 20px;
+    margin-top: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.user-panel{
+    color: #000000;
+}
+
+.proyecont {
+    max-width: 800px;
+    margin: auto;
+    background: #ffffff;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+h1 {
+    text-align: center;
+}
+
+form {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 20px;
+}
+
+.proyecciones-list {
+    list-style-type: none;
+    padding: 0;
+}
+
+.proyeccion-card {
+    background: #f7eeef;
+    padding: 15px;
+    border: 1px solid #cf7979;
+    margin-bottom: 10px;
+    border-radius: 5px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.peliculatitle{
+    color: #9e0707;
+}
+.proyeccion-card h3 {
+    margin: 0 0 5px;
+}
+
+.proyeccion-card p {
+    margin: 0;
+}
+
+.tools{
+    justify-content: center;
+    padding-right: 5px;
+    font-size: 28px;
+    color: #d00e1a;
+}
+
+
+@media screen and (min-width: 768px) and (max-width: 1024px) {
+    .container {
+        padding: 0 20px;
+    }
+
+    .empresa {
+        margin-right: 40px;
+        padding: 0 20px;
+    }
+
+    .logo {
+        width: 150px;
+    }
+
+    .btn-logout {
+        margin: 0 20px;
+        font-size: 15px;
+    }
+
+    .main-content {
+        padding: 20px;
+    }
+
+    .control-panel {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .buttons {
+        padding-left: 0;
+        margin-top: 15px;
+        flex-wrap: wrap;
+    }
+
+    .buttons a {
+        font-size: 15px;
+        padding: 5px 12px;
+    }
+
+    .admin-panel {
+        overflow-x: auto;
+    }
+
+    .table {
+        min-width: 700px;
+    }
+
+    .admingest a {
+        width: 140px;
+        margin: 3px 5px;
+        font-size: 13px;
+    }
+}
+
+/* Media Query para Móviles (max-width: 767px) */
+@media screen and (max-width: 767px) {
+    .container {
+        flex-direction: column;
+        padding: 10px;
+        gap: 10px;
+    }
+
+    .container h5 {
+        font-size: 16px;
+        text-align: center;
+    }
+
+    .empresa {
+        margin-right: 0;
+        padding: 0;
+    }
+
+    .logo {
+        width: 160px;
+    }
+
+    .btn-logout {
+        margin: 5px 0;
+        font-size: 14px;
+        padding: 4px 8px;
+    }
+
+    .main-content {
+        padding: 15px;
+    }
+
+    h1 {
+        font-size: 24px;
+        text-align: center;
+    }
+
+    .control-panel {
+        flex-direction: column;
+        text-align: center;
+        padding: 15px;
+    }
+
+    .buttons {
+        padding-left: 0;
+        flex-direction: column;
+        gap: 10px;
+    }
+
+    .buttons a {
+        font-size: 14px;
+        padding: 5px 10px;
+        width: 100%;
+        max-width: 250px;
+    }
+
+    .admin-panel {
+        padding: 10px;
+        overflow-x: auto;
+    }
+
+    .admin-header {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .tools {
+        margin-bottom: 10px;
+    }
+
+    .list-pelicula {
+        width: 100%;
+        overflow-x: auto;
+        -webkit-overflow-scrolling: touch;
+        padding-bottom: 15px;
+    }
+
+    .table {
+        min-width: 100%;
+        font-size: 12px;
+        border-collapse: collapse;
+        table-layout: fixed;
+    }
+
+    .table th, .table td {
+        padding: 8px 4px;
+        white-space: nowrap;
+        overflow: hidden;
+        text-overflow: ellipsis;
+        min-width: 80px;
+    }
+
+    .admingest a {
+        width: auto;
+        min-width: 100px;
+        margin: 2px;
+        font-size: 11px;
+        padding: 4px 8px;
+        white-space: nowrap;
+    }
+
+    .gestbuttons {
+        min-width: 120px; /* Asegura espacio para los botones */
+    }
+
+    .cartelera-btn {
+        width: 20px;
+        height: 20px;
+        font-size: 14px;
+    }
+
+    .tooltip-text {
+        font-size: 9px;
+    }
+}
+
+/* Mejoras generales para la responsividad */
+@media screen and (max-width: 1024px) {
+    .admin-panel {
+        margin-top: 15px;
+    }
+
+    .table-responsive {
+        display: block;
+        width: 100%;
+        overflow-x: auto;
+        -webkit-overflow-scrolling: touch;
+    }
+}
