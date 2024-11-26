@@ -19,6 +19,10 @@ import org.springframework.web.servlet.mvc.support.RedirectAttributes;
 
 import java.util.List;
 
+/**
+ * Controlador encargado de gestionar las proyecciones de películas en el sistema.
+ * Permite la creación, eliminación y visualización de proyecciones en salas específicas.
+ */
 @Controller
 public class ProyeccionController {
 
@@ -31,6 +35,14 @@ public class ProyeccionController {
     @Autowired
     private SalaService salaService;
 
+    /**
+     * Muestra el formulario para agregar una nueva proyección para una película específica.
+     *
+     * @param id El ID de la película para la que se desea agregar una proyección.
+     * @param model El objeto Model que se utiliza para pasar datos a la vista.
+     * @param redirectAttributes Los atributos que se pasan para redirigir con mensajes flash.
+     * @return La vista para agregar una proyección.
+     */
     @GetMapping("/formproyeccion/{id}")
     public String showFormProyeccion(
             @PathVariable Long id,
@@ -51,6 +63,15 @@ public class ProyeccionController {
         return "addproyeccion";
     }
 
+    /**
+     * Guarda una nueva proyección en el sistema.
+     *
+     * @param id El ID de la película relacionada con la proyección.
+     * @param proyeccion El objeto Proyeccion que contiene los datos a guardar.
+     * @param result El resultado de las validaciones del formulario.
+     * @param flash Los atributos de redirección para enviar mensajes flash.
+     * @return Redirige a la vista de creación de proyección o muestra errores si los hay.
+     */
     @PostMapping("/addproyeccion/{id}")
     public String saveProyeccion(
             @PathVariable(value = "id") Long id,
@@ -72,6 +93,13 @@ public class ProyeccionController {
         }
     }
 
+    /**
+     * Elimina una proyección del sistema.
+     *
+     * @param id El ID de la proyección a eliminar.
+     * @param flash Los atributos de redirección para enviar mensajes flash.
+     * @return Redirige a la página principal con un mensaje de éxito o error.
+     */
     @GetMapping("/deleteproyeccion/{id}")
     public String deleteProyeccion(@PathVariable Long id, RedirectAttributes flash) {
         System.out.println("Intentando eliminar el horario con Proyeccion ID: " + id);

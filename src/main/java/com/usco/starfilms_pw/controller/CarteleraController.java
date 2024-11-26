@@ -12,16 +12,28 @@ import org.springframework.validation.annotation.Validated;
 import org.springframework.web.bind.annotation.*;
 import org.springframework.web.servlet.mvc.support.RedirectAttributes;
 
-
+/**
+ * Controlador encargado de gestionar las operaciones relacionadas con la cartelera de películas.
+ * Permite mostrar un formulario para agregar películas a la cartelera, guardar cambios, y eliminar películas de la cartelera.
+ */
 @Controller
 public class CarteleraController {
 
     @Autowired
-    CarteleraService carteleraService;
+    private CarteleraService carteleraService;
 
     @Autowired
     private PeliculaServiceImpl peliculaServiceImpl;
 
+    /**
+     * Muestra el formulario para agregar una película a la cartelera.
+     *
+     * @param id El ID de la película a agregar.
+     * @param model El modelo para pasar los datos al frontend.
+     * @param redirectAttributes Atributos de redirección para mensajes flash.
+     * @return La vista del formulario para agregar la película a la cartelera.
+     * @throws RuntimeException Si la película no se encuentra.
+     */
     @GetMapping("/formcartelera/{id}")
     public String showFormCartelera(
             @PathVariable Long id,
@@ -38,6 +50,15 @@ public class CarteleraController {
         return "addcartelera";
     }
 
+    /**
+     * Guarda una película en la cartelera.
+     *
+     * @param id El ID de la película.
+     * @param cartelera Los datos de la cartelera a guardar.
+     * @param result El resultado de las validaciones del formulario.
+     * @param flash Atributos de redirección para mensajes flash.
+     * @return Redirección a la vista del formulario con mensajes de éxito o error.
+     */
     @PostMapping("/addcartelera/{id}")
     public String savePelicula(
             @PathVariable(value = "id") Long id,
@@ -59,6 +80,13 @@ public class CarteleraController {
         }
     }
 
+    /**
+     * Elimina una película de la cartelera.
+     *
+     * @param id El ID de la película a eliminar de la cartelera.
+     * @param flash Atributos de redirección para mensajes flash.
+     * @return Redirección a la página de inicio con mensaje de éxito o error.
+     */
     @GetMapping("/deletecartelera/{id}")
     public String deleteCartelera(@PathVariable Long id, RedirectAttributes flash) {
         System.out.println("Intentando eliminar la película con cartelera ID: " + id);
@@ -71,5 +99,5 @@ public class CarteleraController {
             return "redirect:/home";
         }
     }
-
 }
+

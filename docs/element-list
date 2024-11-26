@@ -1,0 +1,7 @@
+com.usco.starfilms_pw
+com.usco.starfilms_pw.configuration
+com.usco.starfilms_pw.controller
+com.usco.starfilms_pw.dto
+com.usco.starfilms_pw.model
+com.usco.starfilms_pw.repository
+com.usco.starfilms_pw.service
